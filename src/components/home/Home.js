@@ -1,5 +1,3 @@
-import React, { useCallback } from 'react'
-import { useSelector } from 'react-redux'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
@@ -7,9 +5,9 @@ import { setProducts } from '../actions/ProductActions'
 import ProductsCard from './ProductsCard'
 
 const Home = () => {
-    const products = useSelector((state)=>state.allProducts.products)
+    //const products = useSelector((state)=>state.allProducts.products)
     const dispatch = useDispatch();
-    const ProductfetchApi =  useCallback(async() => {
+    const ProductfetchApi = (async() => {
       try{
       const response = await axios.get("https://fakestoreapi.com/products")
       console.log(response.data)
@@ -21,7 +19,7 @@ const Home = () => {
     })
     useEffect(() => {
       ProductfetchApi();
-    },[])
+    })
 
   return (
     <div>
