@@ -18,8 +18,8 @@ const Home = () => {
     }
     useEffect(() => {
       ProductfetchApi();
-      //if(products && products.lenght===0 ? )
-    },[])
+    })
+
   return (
     <div>
       <div className='grid grid-cols-2 gap-3'>
