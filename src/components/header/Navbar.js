@@ -11,6 +11,10 @@ const Navbar = () => {
             path:"/cart",
             name:"Cart"
         },
+        {
+            path:"/allproducts",
+            name:"Products"
+        },
     ]
   return (
     <div className='flex justify-between items-center px-8 p-2'>
@@ -36,4 +40,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;
