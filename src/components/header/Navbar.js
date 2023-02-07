@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+//import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     const routes = [
@@ -28,9 +28,9 @@ const Navbar = () => {
         <ul className='flex gap-4'>
             {
                 routes.map((route)=>(
-                    <NavLink className="hover:text-emerald-500" to={route.path} key={route.name}>
+                    <a className="hover:text-emerald-500" href={route.path} key={route.name}>
                         <li className=''>{route.name}</li>
-                    </NavLink>
+                    </a>
                 ))
             }
         </ul>
