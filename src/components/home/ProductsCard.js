@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const ProductsCard = () => {
     const products = useSelector((state)=>state.allProducts.products)
-    let dataArr = Array.from(products);
-    const listProducts = dataArr.map((product)=>{
+   
+    const listProducts = products.map(function(product){
     const {id,title,image,price} = product;
       return (
         <div key={id} className="flex flex-col gap-3 p-4 m-2 bg-gray-50 drop-shadow-md rounded-md h-72">
